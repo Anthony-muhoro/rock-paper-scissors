@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="computer-section">
+        <div class="top-displays">
+          <div class="author-display">
+            <h2>&copy;</h2>
+            <a href="http://github.com/Anthony-muhoro" target="_blank"
+              >Anthony Muhoro</a
+            >
+          </div>
+          <div class="scores-display">
+            <div class="computer-scores-display">
+              <h2>Computer</h2>
+              <span class="computer-score">0</span>
+            </div>
+            <div class="player-scores-display">
+              <span class="player-score">1</span>
+              <h2>Player</h2>
+            </div>
+          </div>
+        </div>
+        <div class="computer-oponent">
+          <h2>Computer</h2>
+          <div id="player-selection">✌️</div>
+        </div>
+      </div>
+      <div class="who-won">
+        <h1 class="winner-display" id="winner-show-display">currently draw</h1>
+      </div>
+      <div class="player-section">
+        <div class="computer-oponent">
+          <h2>Player</h2>
+          <div id="player-selection">✌️</div>
+        </div>
+        <div class="play-options">
+          <div id="rock">✊</div>
+          <div id="paper">✋</div>
+          <div id="scissors">✌️</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

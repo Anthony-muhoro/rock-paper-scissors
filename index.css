@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+:root {
+  --primary-text-color: #000;
+  --secondary-text-color: #0118d8;
+  --primary-background-color: #fff085;
+  --secondary-background-color: #ea7300;
+  --primary-font: "Bebas Neue", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: var(--primary-font);
+}
+.game-container {
+  display: flex;
+  background-color: gray;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.computer-section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-background-color);
+}
+.computer-section .top-diplays {
+  display: flex;
+  justify-content: space-between;
+}
+.computer-section .top-diplays .author-display {
+  display: flex;
+  flex: r;
+}
+.who-won {
+  background-color: var(--secondary-background-color);
+}
+.player-section {
+  background-color: var(--primary-background-color);
+}
