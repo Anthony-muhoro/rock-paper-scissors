@@ -1,46 +1,200 @@
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  list-style: none;
+  word-spacing: 0.2rem;
 }
-:root {
-  --primary-text-color: #000;
-  --secondary-text-color: #0118d8;
-  --primary-background-color: #fff085;
-  --secondary-background-color: #ea7300;
-  --primary-font: "Bebas Neue", sans-serif;
+:root{
+    --primary-background-color:#9ec91e;
+    --secondary-background-color:#f2c244;
+    --light-background-color:#EFECEC;
+    --computer-score-color:#1230AE;
+    --player-score-color:#FF204E;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.6rem;
-  font-family: var(--primary-font);
+  user-select: none; 
+  
 }
+
+
+
 .game-container {
   display: flex;
-  background-color: gray;
-  min-height: 100vh;
-  align-items: center;
   flex-direction: column;
+ 
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 50vw;
+  background-color: var(--primary-background-color);
+  margin: 0 auto;
+  
+  
 }
-.computer-section {
+
+.computer-section{
+    width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-background-color);
+  align-items: center;
+  justify-content: center;
 }
-.computer-section .top-diplays {
+.top-displays {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
+  
+  
+  
 }
-.computer-section .top-diplays .author-display {
+
+.author-display {
   display: flex;
-  flex: r;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
 }
+
+.author-display a {
+    font-size: 2.4rem;
+  text-decoration: none;
+  color: red;
+
+}
+
+.scores-display {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  background-color: var(--light-background-color);
+  padding: 0.6rem;
+}
+
+.computer-scores-display,
+.player-scores-display {
+  display: flex;
+  gap:.8rem;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.computer-score{
+    color: var(--computer-score-color);
+
+}
+.computer-score, .player-score {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.player-score{
+    color: var(--player-score-color);
+}
+
+
+.player-comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+#computerselection,
+#playerSelection {
+  font-size: 10rem;
+  --size: 13rem;
+  width: var(--size);
+  height: var(--size);
+  border: 0.2rem dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-background-color);
+  border-radius: 1rem;
+}
+
+
 .who-won {
+  margin: 2rem auto;
+  padding: 2rem 1rem;
   background-color: var(--secondary-background-color);
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
 }
-.player-section {
-  background-color: var(--primary-background-color);
+
+.winner-display {
+  font-weight: bold;
+}
+
+.play-options {
+
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+#options,
+#option {
+  padding: 0 2rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#options li,
+#option li {
+  list-style: none;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+#options p,
+#option p {
+  
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+
+@media screen and (max-width: 56.4em) {
+  .game-container {
+    max-width: 100vw;
+  }
+}
+
+@media screen and (max-width: 28.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  .top-displays {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+  }
+
+  .play-options {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
