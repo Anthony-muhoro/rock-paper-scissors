@@ -14,7 +14,6 @@ const buttons = document.querySelectorAll(".play-options > div");
 let playerCount = 0;
 let computerCount = 0;
 
-
 const rules = {
   rock: "scissors",
   scissors: "paper",
